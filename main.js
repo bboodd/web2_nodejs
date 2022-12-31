@@ -11,9 +11,7 @@ var app = http.createServer(function(request,response){
       return;
     }
     response.writeHead(200);
-    console.log(__dirname + url);
-    response.end('hakhyeon : '+url)
-    //response.end(fs.readFileSync(__dirname + url));
+    response.end(fs.readFileSync(__dirname + url));
 
 });
 app.listen(3000);
